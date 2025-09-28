@@ -1,4 +1,4 @@
-x = open(file='2024_majus\\bedat.txt',mode='r',encoding='utf-8').read().split('\n')
+x = open(file='Digitalis_kultura\\2024_majus\\bedat.txt',mode='r',encoding='utf-8').read().split('\n')
 x.pop()
 #print(x)
 
@@ -29,7 +29,7 @@ print(kilepes)
 
 #print('3. feladat')
 
-kesok = open(file='2024_majus\\kesok.txt',mode='w+',encoding='utf-8')
+kesok = open(file='Digitalis_kultura\\2024_majus\kesok.txt',mode='w+',encoding='utf-8')
 
 for i in range(len(lst)):
     if int(lst[i][1][0:2]) == 7 and int(lst[i][1][3:5]) > 50 and int(lst[i][2]) == 1:

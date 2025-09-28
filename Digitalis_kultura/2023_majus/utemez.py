@@ -1,43 +1,3 @@
-<<<<<<< HEAD
-lst = open('Digitalis_kultura\\2023_majus\\taborok.txt','r').read().split('\n')
-for i in range(len(lst)):
-	lst[i] = lst[i].split('\t')
-lst.pop()
-for i in range(len(lst)):
-    for j in range(len(lst[i])):
-        try:
-            lst[i][j] = int(lst[i][j])
-        except:
-            pass
-print(lst)
-
-print('2.feladat')
-print(f'Az először rögzített tábor témája: {lst[0][5]}\nAz utoljára rögzített tábor témája: {lst[-1][5]}')
-
-print('3. feladat')
-vane = False
-for i in range(len(lst)):
-	if lst[i][5] == 'zenei':
-		print(f'Zenei tábor kezdődik {lst[i][0]}. hó {lst[i][1]}. napján.')
-		vane = True
-if vane == False:
-    print('Nem volt zenei tábor.')
-    
-print('4.feladat')
-y = []
-
-for i in lst:
-    y.append(len(i[4]))
-
-k = None
-for i in range(len(y)):
-    if y[i] == max(y):
-        k = i
-        
-print(f'Legnépszerűbbek:\n{lst[k][0]} {lst[k][1]} {lst[k][5]}')
-
-#print('5.feladat')
-=======
 x = open('Digitalis_kultura\\2023_majus\\taborok.txt','r').read().split('\n')
 x.pop()
 #print(x)
@@ -83,7 +43,6 @@ for i in range(len(legnepszerubbek)):
 
 #print('5.feladat')
 
->>>>>>> 67984d822a462c7d2cba364b18935bf7aea8eb43
 def sorszam(honap,nap):
     napok = 0
     if honap == 6:
@@ -98,40 +57,6 @@ def sorszam(honap,nap):
     return napok
 
 print('6.feladat')
-<<<<<<< HEAD
-hó = 8
-nap = 1
-
-taborok = 0
-for i in range(len(lst)):
-    if sorszam(lst[i][0],lst[i][1]) <= sorszam(hó,nap) and sorszam(lst[i][2],lst[i][3]) >= sorszam(hó,nap):
-        taborok += 1
-        
-print(f'Ekkor éppen {taborok} tábor tart.')
-
-print('7.feladat')
-erdeklodott = []
-
-
-for i in range(len(lst)):
-    if 'L' in lst[i][4]:
-        erdeklodott.append([sorszam(lst[i][0],lst[i][1]),lst[i]])
-        
-#print(erdeklodott)
-
-erdeklodott_sorted = []
-while len(erdeklodott_sorted) != len(erdeklodott):
-	legkisebb = [78,[69,69]]
-	for i in range(len(erdeklodott)):
-		if erdeklodott[i][0] < legkisebb[0] and erdeklodott[i] not in erdeklodott_sorted:
-			legkisebb = erdeklodott[i]
-			#print(erdeklodott[i])
-	erdeklodott_sorted.append(legkisebb)
- 
-print(erdeklodott_sorted)
-
-    
-=======
 ho = 8
 nap = 1
 
@@ -188,4 +113,3 @@ if elmehet == True:
     print('Elmehet mindegyik taborba.')
 else:
     print('Nem mehet el mindegyik taborba.')
->>>>>>> 67984d822a462c7d2cba364b18935bf7aea8eb43
